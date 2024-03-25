@@ -34,3 +34,8 @@ alias fd="fdfind"
 
 alias bat="batcat"
 alias cat="batcat"
+
+alias sp="cd ~/BigBridge/SmartPeak/"
+
+alias dote="cd ~/.dotfiles && vim ."
+alias dotu="cd ~/.dotfiles && git pull"
