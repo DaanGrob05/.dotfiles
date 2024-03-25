@@ -4,4 +4,6 @@ end
 
 source ~/.dotfiles/aliases.sh
 
+set PATH /home/daan/.npm-global/bin/ $PATH
+
 starship init fish | source
