@@ -33,7 +33,6 @@ alias fd="fdfind"
 # alias cdall="cd $(fdfind -t d | fzf)"
 
 alias bat="batcat"
-alias cat="batcat"
 
 alias sp="cd ~/BigBridge/SmartPeak/"
 
