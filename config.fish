@@ -9,3 +9,7 @@ set PATH /home/daan/.cargo/bin $PATH
 set PATH /home/daan/.local/bin $PATH
 
 starship init fish | source
+
+function take
+    mkdir -p "$argv[1]"; and cd "$argv[1]"
+end
