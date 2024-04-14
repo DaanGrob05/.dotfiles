@@ -12,6 +12,7 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # # Manual action
 # git config --global user.name "UserName"
 # git config --global user.email "Email"
+# git config --global init.defaultBranch main
 # install neovim appimage
 
 # Github SSH keg
