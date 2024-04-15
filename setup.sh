@@ -83,3 +83,6 @@ flatpak install --user flathub org.freedesktop.Platform.GL32.default/x86_64/23.0
 flatpak install --user JagexLauncher com.jagex.Launcher
 # Install RuneLite (if desired)
 flatpak install --user JagexLauncher com.jagex.Launcher.ThirdParty.RuneLite
+
+# Install zoxide
+curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
