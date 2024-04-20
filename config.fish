@@ -12,7 +12,7 @@ set PATH /usr/local/go/bin $PATH
 starship init fish | source
 
 function take
-    mkdir -p "$argv[1]"; and cd "$argv[1]"
+    mkdir -p "$argv[1]"; and z "$argv[1]"
 end
 
 zoxide init fish | source
