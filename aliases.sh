@@ -40,3 +40,5 @@ alias dote="cd ~/.dotfiles && vim ."
 alias dotu="cd ~/.dotfiles && git pull"
 
 alias c="z" # easier to type than z and is close to cd
+
+alias doco="docker-compose"
