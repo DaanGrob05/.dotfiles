@@ -1,12 +1,12 @@
 
 
 function artisan --description 'Alias that helps fish recognize artisan as a command that should be completed'
-    php artisan $argv
+    sail artisan $argv
 end
 
 function __fish_artisan_commands_with_descriptions
     begin
-        php artisan list --raw 2>/dev/null
+        sail artisan list --raw 2>/dev/null
         or return
     end | grep -vE '^ ' | string replace -r '\s+' '\t'
 end
