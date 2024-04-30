@@ -19,3 +19,7 @@ complete -c artisan -f -n 'test -f artisan; and __fish_use_subcommand' -a '(__fi
 complete -c artisan -f -n 'test -f artisan; and __fish_seen_subcommand_from help' -a '(__fish_artisan_commands)'
 
 complete -c php -x -a '(__fish_complete_subcommand)'
+
+function laravel_new --description 'Create a new Laravel project'
+    curl -s https://laravel.build/$argv\?with=mysql | bash
+end
