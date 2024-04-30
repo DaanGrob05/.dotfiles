@@ -3,6 +3,7 @@ if status is-interactive
 end
 
 source ~/.dotfiles/aliases.sh
+source ~/.dotfiles/fish_functions/index.fish
 
 set PATH /home/daan/.npm-global/bin/ $PATH
 set PATH /home/daan/.cargo/bin $PATH
@@ -10,9 +11,5 @@ set PATH /home/daan/.local/bin $PATH
 set PATH /usr/local/go/bin $PATH
 
 starship init fish | source
-
-function take
-    mkdir -p "$argv[1]"; and z "$argv[1]"
-end
 
 zoxide init fish | source
