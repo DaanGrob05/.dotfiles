@@ -45,3 +45,5 @@ alias doco="docker-compose"
 
 alias sail="./vendor/bin/sail"
 alias a="artisan"
+
+alias gsw="git switch"
