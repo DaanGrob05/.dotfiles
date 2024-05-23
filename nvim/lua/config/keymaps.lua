@@ -3,3 +3,4 @@
 -- Add any additional keymaps here
 
 vim.keymap.set("n", "<leader>cd", "<cmd>Copilot disable<cr>", { desc = "Disable Copilot" })
+vim.keymap.set("n", "<leader>cen", "<cmd>Copilot enable<cr>", { desc = "Enabre Copilot" })
