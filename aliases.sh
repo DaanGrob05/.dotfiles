@@ -49,3 +49,6 @@ alias a="artisan"
 alias gsw="git switch"
 
 alias m="bin/magento"
+
+alias mk="minikube"
+alias k="kubectl"
