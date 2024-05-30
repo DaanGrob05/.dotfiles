@@ -10,6 +10,7 @@ set PATH /home/daan/.cargo/bin $PATH
 set PATH /home/daan/.local/bin $PATH
 set PATH /usr/local/go/bin $PATH
 set PATH /home/daan/go/bin $PATH
+set PATH /.config/composer/vendor/bin $PATH
 
 starship init fish | source
 
