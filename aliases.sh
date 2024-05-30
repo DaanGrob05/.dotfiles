@@ -36,7 +36,7 @@ alias bat="batcat"
 
 alias sp="cd ~/BigBridge/SmartPeak/"
 
-alias dote="cd ~/.dotfiles && vim ."
+alias dote="cd ~/.dotfiles && vim . && cd -"
 alias dotu="cd ~/.dotfiles && git pull"
 
 alias c="z" # easier to type than z and is close to cd
