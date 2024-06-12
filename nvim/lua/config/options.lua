@@ -5,4 +5,3 @@
 local opt = vim.opt
 
 opt.scrolloff = 12
-vim.opt.relativenumber = false
