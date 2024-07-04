@@ -120,3 +120,6 @@ curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/i
 # Install Bob and neovim
 cargo install --git https://github.com/MordechaiHadad/bob.git
 bob use latest
+
+# Install Gradience
+flatpak install flathub com.github.GradienceTeam.Gradience
