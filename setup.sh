@@ -2,17 +2,33 @@
 
 # Update and install
 sudo apt update && sudo apt upgrade -y
-sudo apt install git-all curl gcc ffmpeg ubuntu-restricted-extras libavcodec-extra ripgrep fd-find fzf xclip bat tmux -y
+sudo apt install git-all curl gcc ffmpeg ubuntu-restricted-extras libavcodec-extra ripgrep fd-find fzf xclip bat tmux gnome-tweaks gnome-shell-extensions -y
 
 # Flatpak
 sudo apt install flatpak
-sudo apt install plasma-discover-backend-flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # # Manual action
 # git config --global user.name "UserName"
 # git config --global user.email "Email"
 # git config --global init.defaultBranch main
+
+# gnome shell extensions
+extensions=(
+	"caffeine"
+	"clipboard-indicator (tudmotu)"
+	"media controls"
+	"openweather"
+	"blur my shell"
+	"just perfection"
+	"vitals"
+	"impatience"
+	"refresh wifi connections"
+	"bluetooth quick connect"
+	"status area horizontal spacing"
+	"color picker"
+	"lock keys"
+)
 
 # Github SSH keg
 ssh-keygen -t ed25519 -C "d.grob05@gmail.com"
