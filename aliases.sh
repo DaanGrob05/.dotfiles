@@ -15,7 +15,7 @@ alias ca="cargo"
 
 alias src="source ~/.dotfiles/config.fish"
 
-alias vim="~/./nvim.appimage"
+alias vim="nvim"
 
 alias gg="lazygit"
 alias lad="lazydocker"

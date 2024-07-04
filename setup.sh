@@ -13,7 +13,6 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 # git config --global user.name "UserName"
 # git config --global user.email "Email"
 # git config --global init.defaultBranch main
-# install neovim appimage
 
 # Github SSH keg
 ssh-keygen -t ed25519 -C "d.grob05@gmail.com"
@@ -98,3 +97,7 @@ sudo install minikube-linux-amd64 /usr/local/bin/minikube && rm minikube-linux-a
 
 # Install Lazydocker
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+
+# Install Bob and neovim
+cargo install --git https://github.com/MordechaiHadad/bob.git
+bob use latest
