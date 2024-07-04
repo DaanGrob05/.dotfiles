@@ -1,2 +1,22 @@
 nnoremap <SPACE> <Nop>
 let mapleader=" "
+
+" Switch to next tab"
+nnoremap L :action NextTab<CR>
+
+" Switch to previous tab"
+nnoremap H :action PreviousTab<CR>
+
+" Save and exit insert mode with Ctrl+S
+inoremap <C-S> <Esc>:w<CR>
+
+" Double press leader for file search (similar to double pressing Shift)
+nnoremap <Leader><Leader> :action SearchEverywhere<CR>
+
+" Close current editor tab"
+nnoremap <Leader>bd :action CloseActiveTab<CR>
+
+" Comment out current line"
+nnoremap gcc :action CommentLine<CR>
+
+set clipboard+=unnamed
