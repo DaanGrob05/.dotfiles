@@ -18,6 +18,7 @@ alias src="source ~/.dotfiles/config.fish"
 alias vim="~/./nvim.appimage"
 
 alias gg="lazygit"
+alias lad="lazydocker"
 
 alias nvimconfig="cd ~/.config/nvim && vim . && cd -"
 
