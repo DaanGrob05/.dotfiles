@@ -4,6 +4,9 @@
 sudo apt update && sudo apt upgrade -y
 sudo apt install git-all curl gcc ffmpeg ubuntu-restricted-extras libavcodec-extra ripgrep fd-find fzf xclip bat tmux gnome-tweaks gnome-shell-extensions -y
 
+# Set up caps lock to be ctrl and both shift to be caps lock
+gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps', 'shift:both_capslock', 'shift:both_capslock_cancel']"
+
 # Flatpak
 sudo apt install flatpak
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
