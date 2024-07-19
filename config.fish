@@ -5,10 +5,6 @@ end
 source ~/.dotfiles/aliases.sh
 source ~/.dotfiles/fish_functions/index.fish
 
-if test -f ~/.dotfiles/.private-dotfiles/config.fish
-    source ~/.dotfiles/.private-dotfiles/config.fish
-end
-
 set PATH /home/daan/.npm-global/bin/ $PATH
 set PATH /home/daan/.cargo/bin $PATH
 set PATH /home/daan/.local/bin $PATH
@@ -24,3 +20,7 @@ zoxide init fish | source
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+if test -f ~/.dotfiles/.private-dotfiles/config.fish
+    source ~/.dotfiles/.private-dotfiles/config.fish
+end
