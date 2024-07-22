@@ -123,3 +123,7 @@ bob use latest
 
 # Install Gradience
 flatpak install flathub com.github.GradienceTeam.Gradience
+
+# Install Difftastic and set as git difftool
+cargo install difftastic
+git config --global diff.external difft
