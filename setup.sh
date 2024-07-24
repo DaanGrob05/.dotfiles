@@ -31,6 +31,9 @@ extensions=(
 	"status area horizontal spacing"
 	"color picker"
 	"lock keys"
+  "Hide Top Bar"
+  "Notification Banner Reloaded"
+  "No Titlebar When Maximized"
 )
 
 # Github SSH keg
