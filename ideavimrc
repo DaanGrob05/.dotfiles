@@ -19,4 +19,6 @@ nnoremap <Leader>bd :action CloseActiveTab<CR>
 " Comment out current line"
 nnoremap gcc :action CommentLine<CR>
 
+
 set clipboard+=unnamed
+set scrolloff=8
