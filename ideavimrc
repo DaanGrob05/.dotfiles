@@ -14,11 +14,22 @@ inoremap <C-S> <Esc>:w<CR>
 nnoremap <Leader><Leader> :action SearchEverywhere<CR>
 
 " Close current editor tab"
-nnoremap <Leader>bd :action CloseActiveTab<CR>
-
-" Comment out current line"
-nnoremap gcc :action CommentLine<CR>
-
+nnoremap <Leader>bd :action CloseContent<CR>
+nnoremap <Leader>bD :action ReopenClosedTab<CR>
 
 set clipboard+=unnamed
 set scrolloff=8
+
+set sneak
+set NERDTree
+set commentary
+set highlightedyank
+set quickscope
+set which-key
+
+" NERDTree
+map <leader>e :NERDTree<CR>
+map <leader>nf :NERDTreeFind<CR>
+
+" Which-key
+map <leader>sk :WhichKey<CR>
