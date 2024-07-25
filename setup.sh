@@ -2,7 +2,7 @@
 
 # Update and install
 sudo apt update && sudo apt upgrade -y
-sudo apt install git-all curl gcc ffmpeg ubuntu-restricted-extras libavcodec-extra ripgrep fd-find fzf xclip bat tmux gnome-tweaks gnome-shell-extensions -y
+sudo apt install git-all curl gcc ffmpeg ubuntu-restricted-extras libavcodec-extra ripgrep fd-find fzf xclip bat tmux gnome-tweaks gnome-shell-extensions build-essential -y
 
 # Set up caps lock to be ctrl and both shift to be caps lock
 gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:nocaps', 'shift:both_capslock', 'shift:both_capslock_cancel']"
