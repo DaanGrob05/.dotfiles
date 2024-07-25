@@ -157,3 +157,10 @@ sudo apt-get update
   # Install Docker packages and verify installation
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo docker run hello-world
+
+# Install N
+curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts
+# If you want n installed, you can use npm now.
+npm install -g n
+mkdir ~/.local
+sudo rm -rf /usr/local/bin/node
