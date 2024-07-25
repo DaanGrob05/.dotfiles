@@ -6,8 +6,6 @@
 git clone --recurse-submodules git@github.com:DaanGrob05/.dotfiles.git ~/.dotfiles
 ```
 
-````
-
 # Symlinks
 
 ```bash
@@ -20,4 +18,11 @@ ln -s ~/.dotfiles/config.fish ~/.config/fish/config.fish
 
 ln -s ~/.dotfiles/ideavimrc ~/.ideavimrc
 
-````
+```
+
+# Other Actions
+
+```bash
+# Load rose-pine.dconf for terminal styling
+dconf load /org/gnome/terminal/legacy/profiles:/ < rose-pine.dconf
+```
