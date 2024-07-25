@@ -17,16 +17,27 @@ nnoremap <Leader><Leader> :action SearchEverywhere<CR>
 nnoremap <Leader>bd :action CloseContent<CR>
 nnoremap <Leader>bD :action ReopenClosedTab<CR>
 
+"split window vertically"
+nnoremap <leader>_ :action SplitVertically <CR>
+
+"split window horizontally"
+nnoremap <leader>- :action SplitHorizontally <CR>
+
+"Unsplit window"
+nmap <leader>wc :action Unsplit<cr>
+nmap <leader>wC :action UnsplitAll<cr>
+
 set clipboard+=unnamed
 set scrolloff=8
 
+"Use ideavim plugins"
 set sneak
 set NERDTree
 set commentary
 set highlightedyank
 set quickscope
 set which-key
-
+ 
 " NERDTree
 map <leader>e :NERDTree<CR>
 map <leader>nf :NERDTreeFind<CR>
