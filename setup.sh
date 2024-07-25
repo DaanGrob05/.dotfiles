@@ -46,21 +46,6 @@ cat ~/.ssh/id_ed25519.pub # Copy this output and add key in github
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
 
-# Node and NPM
-sudo apt-get update
-sudo apt-get install -y ca-certificates curl gnupg
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-NODE_MAJOR=20
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
-sudo apt-get update
-sudo apt-get install nodejs -y
-
-# Set NPM Global path
-mkdir ~/.npm-global
-npm config set prefix '~/.npm-global'
-echo 'export PATH=~/.npm-global/bin:$PATH' >>~/.zshrc
-
 # Bun
 curl -fsSL https://bun.sh/install | bash
 exec /usr/bin/zsh
@@ -80,9 +65,6 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 	sudo apt install gh -y#
 gh extension install dlvhdr/gh-dash
 
-# install rose pine kde theme
-git clone git@github.com:ashbork/kde.git ~/rose-pine-kde/ # install settings > appearance > plasma style > install from file > select the .tar.gz file
-
 # Bruno CLI
 npm i -g @usebruno/cli#
 
@@ -90,7 +72,7 @@ npm i -g @usebruno/cli#
 sudo apt-add-repository ppa:fish-shell/release-3
 sudo apt update
 sudo apt install fish
-chsh -s ${which fish}
+chsh -s /usr/bin/fish
 
 # Install Starship Prompt
 curl -sS https://starship.rs/install.sh | sh
@@ -159,8 +141,10 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 sudo docker run hello-world
 
 # Install N
-curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | bash -s lts
+curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | sudo bash -s lts
 # If you want n installed, you can use npm now.
 npm install -g n
-mkdir ~/.local
+np lts
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
 sudo rm -rf /usr/local/bin/node
