@@ -151,3 +151,12 @@ np lts
 mkdir ~/.npm-global
 npm config set prefix '~/.npm-global'
 sudo rm -rf /usr/local/bin/node
+
+# Pipx
+sudo apt update
+sudo apt install pipx
+pipx ensurepath
+sudo pipx ensurepath --global # optional to allow pipx actions with --global argument
+
+# Posting
+pipx install posting
