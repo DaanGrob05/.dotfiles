@@ -69,7 +69,7 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 gh extension install dlvhdr/gh-dash
 
 # Bruno CLI
-npm i -g @usebruno/cli#
+npm i -g @usebruno/cli
 
 # install fish shell
 sudo apt-add-repository ppa:fish-shell/release-3
