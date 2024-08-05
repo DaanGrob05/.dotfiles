@@ -160,3 +160,6 @@ sudo pipx ensurepath --global # optional to allow pipx actions with --global arg
 
 # Posting
 pipx install posting
+
+# Install tmuxinator
+sudo apt install tmuxinator
