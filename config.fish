@@ -22,6 +22,8 @@ zoxide init fish | source
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
+export EDITOR=nvim
+
 if test -f ~/.dotfiles/.private-dotfiles/config.fish
     source ~/.dotfiles/.private-dotfiles/config.fish
 end
