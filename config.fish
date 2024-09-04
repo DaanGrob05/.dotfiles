@@ -4,6 +4,7 @@ end
 
 source ~/.dotfiles/aliases.sh
 source ~/.dotfiles/fish_functions/index.fish
+source ~/.asdf/asdf.fish
 
 set PATH /home/daan/.npm-global/bin/ $PATH
 set PATH /home/daan/.cargo/bin $PATH
