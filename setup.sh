@@ -163,3 +163,12 @@ pipx install posting
 
 # Install tmuxinator
 sudo apt install tmuxinator
+
+# Install asdf, erlang and elixir
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.1
+mkdir -p ~/.config/fish/completions
+ln -s ~/.asdf/completions/asdf.fish ~/.config/fish/completions
+asdf plugin add erlang
+asdf plugin add elixir
+asdf install erlang 23.3.4.20
+asdf install elixir master-otp-23
