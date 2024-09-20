@@ -5,3 +5,5 @@
 local opt = vim.opt
 
 opt.scrolloff = 12
+
+opt.clipboard = "unnamedplus"
