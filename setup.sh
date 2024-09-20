@@ -128,20 +128,17 @@ echo \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |
 	sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 sudo apt-get update
-sudo apt-get update
-sudo apt-get install ca-certificates curl
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
-# Add the repository to Apt sources
-echo \
-	"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |
-	sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
-sudo apt-get update
 # Install Docker packages and verify installation
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 sudo docker run hello-world
+# Add user to docker group
+sudo groupadd docker
+sudo usermod -aG docker $USER
+# Log out and log back in to apply the group changes
+docker run hello-world
+# If sudo related errors come up, run this
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "$HOME/.docker" -R
 
 # Install N
 curl -fsSL https://raw.githubusercontent.com/tj/n/master/bin/n | sudo bash -s lts
