@@ -30,13 +30,13 @@ extensions=(
 	"just perfection"
 	"vitals"
 	"impatience"
-	"refresh wifi connections"
 	"bluetooth quick connect"
 	"status area horizontal spacing"
 	"color picker"
 	"lock keys"
 	"Notification Banner Reloaded"
 	"No Titlebar When Maximized"
+	"gTile"
 )
 
 # Github SSH key
