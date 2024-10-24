@@ -2,6 +2,10 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+if test -f ~/.dotfiles/.private-dotfiles/aliases.sh
+    source ~/.dotfiles/.private-dotfiles/aliases.sh
+end
+
 source ~/.dotfiles/aliases.sh
 source ~/.dotfiles/fish_functions/index.fish
 # source ~/.asdf/asdf.fish
