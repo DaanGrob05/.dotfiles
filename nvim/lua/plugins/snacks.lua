@@ -7,5 +7,10 @@ return {
         git_signs = true,
       },
     },
+    styles = {
+      zen = {
+        width = 0.5,
+      },
+    },
   },
 }
