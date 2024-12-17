@@ -7,8 +7,13 @@ vim.api.nvim_create_autocmd("VimEnter", {
   group = vim.api.nvim_create_augroup("OpenSnacksZen", { clear = true }),
   callback = function()
     vim.defer_fn(function()
-      vim.cmd("Neotree close")
+      -- Close Neo-tree if it's open
+      if package.loaded["neo-tree"] then
+        vim.cmd("Neotree close")
+      end
+
+      -- Trigger zen mode
       require("snacks").zen()
-    end, 100) -- Delay to ensure all plugins are loaded
+    end, 125) -- Delay to ensure all plugins are loaded
   end,
 })

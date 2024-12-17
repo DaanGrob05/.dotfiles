@@ -18,3 +18,5 @@ vim.keymap.set("n", "<leader>ff", function()
     file_ignore_patterns = { "node_modules/", "dist/", "git/" },
   })
 end, { noremap = true, silent = true, desc = "Find files (including hidden, no ignore)" })
+
+Snacks.toggle.zen():map("<leader>z")
