@@ -27,6 +27,13 @@ nnoremap <leader>- :action SplitHorizontally <CR>
 nmap <leader>wc :action Unsplit<cr>
 nmap <leader>wC :action UnsplitAll<cr>
 
+" Format
+nmap <leader>cf <Action>(ReformatCode)
+vmap <leader>cf <Action>(ReformatCode)
+" Code Action
+nmap <leader>ca <Action>(RefactoringMenu)
+vmap <leader>ca <Action>(RefactoringMenu)
+
 set clipboard+=unnamed
 set scrolloff=8
 
