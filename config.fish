@@ -31,3 +31,9 @@ export EDITOR=nvim
 if test -f ~/.dotfiles/.private-dotfiles/config.fish
     source ~/.dotfiles/.private-dotfiles/config.fish
 end
+
+if test -f /opt/workbench/profile/bin/bbShellConfig
+## BEGIN workbench SHELL CONFIG ##
+/opt/workbench/profile/bin/bbShellConfig fish | source
+## END workbench SHELL CONFIG ##
+end
