@@ -6,6 +6,9 @@ return {
       toggles = {
         git_signs = true,
       },
+      show = {
+        statusline = true,
+      },
     },
     styles = {
       zen = {
