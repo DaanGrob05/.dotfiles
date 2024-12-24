@@ -20,3 +20,28 @@ vim.keymap.set("n", "<leader>ff", function()
 end, { noremap = true, silent = true, desc = "Find files (including hidden, no ignore)" })
 
 Snacks.toggle.zen():map("<leader>z")
+
+-- Nvim Dap keybinds to mimic Jetbrains debugger
+local dap = require("dap")
+local dapui = require("dapui")
+-- Keybindings for debugging (mimicking PhpStorm)
+vim.keymap.set("n", "<F5>", dap.continue, { desc = "Debug: Start/Continue" }) -- Start/Continue
+vim.keymap.set("n", "<F9>", dap.toggle_breakpoint, { desc = "Debug: Toggle Breakpoint" }) -- Toggle breakpoint
+vim.keymap.set("n", "<F10>", dap.step_over, { desc = "Debug: Step Over" }) -- Step over
+vim.keymap.set("n", "<F11>", dap.step_into, { desc = "Debug: Step Into" }) -- Step into
+vim.keymap.set("n", "<F12>", dap.step_out, { desc = "Debug: Step Out" }) -- Step out
+
+-- Breakpoint management
+vim.keymap.set("n", "<Shift-F9>", function()
+  dap.set_breakpoint(vim.fn.input("Breakpoint condition: "))
+end, { desc = "Debug: Set Conditional Breakpoint" }) -- Conditional breakpoint
+
+vim.keymap.set("n", "<Ctrl-F9>", function()
+  dap.set_breakpoint(nil, nil, vim.fn.input("Log point message: "))
+end, { desc = "Debug: Set Logpoint" }) -- Log point
+
+-- DAP UI
+vim.keymap.set("n", "<Ctrl-F8>", dapui.toggle, { desc = "Debug: Toggle Debug UI" }) -- Open/Close debug UI
+
+-- Stopping debugging
+vim.keymap.set("n", "<Shift-F5>", dap.terminate, { desc = "Debug: Stop" }) -- Stop debugging
