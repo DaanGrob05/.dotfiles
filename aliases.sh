@@ -59,3 +59,5 @@ alias np="N_PREFIX=$HOME/.local n"
 alias mux="tmuxinator"
 
 alias gocli="golangci-lint"
+
+alias prc="gh pr checkout"
