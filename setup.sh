@@ -183,3 +183,8 @@ sudo gnome-text-editor /etc/udev/rules.d/99-keychron.rules
 # Reload rules and trigger them
 sudo udevadm control --reload-rules
 sudo udevadm trigger
+
+# Install and setup symfony cli
+curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | sudo -E bash
+sudo apt install symfony-cli
+symfony self:completion fish | sudo tee /etc/fish/completions/symfony.fish
