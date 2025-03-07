@@ -45,3 +45,8 @@ vim.keymap.set("n", "<Ctrl-F8>", dapui.toggle, { desc = "Debug: Toggle Debug UI"
 
 -- Stopping debugging
 vim.keymap.set("n", "<Shift-F5>", dap.terminate, { desc = "Debug: Stop" }) -- Stop debugging
+
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "{", "{zz")
+vim.keymap.set("n", "}", "}zz")
