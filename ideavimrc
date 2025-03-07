@@ -520,6 +520,10 @@ inoremap <C-W> <C-G>u<C-W>
 nnoremap Q @@
 " There are several more Neovim mappings that need to be ported.  See link.
 
+" Alternative Code Generation mapping
+nmap <leader>ig <Action>(Generate)
+
+
 " Jetbrains conflicts
 " https://github.com/JetBrains/ideavim/blob/master/doc/sethandler.md
 " None, yet.  Possible conflicts: ctrl -6befhjklorsvw
