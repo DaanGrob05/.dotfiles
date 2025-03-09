@@ -23,10 +23,6 @@ starship init fish | source
 
 zoxide init fish | source
 
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
-
 export EDITOR=nvim
 
 if test -f ~/.dotfiles/.private-dotfiles/config.fish
@@ -34,7 +30,7 @@ if test -f ~/.dotfiles/.private-dotfiles/config.fish
 end
 
 if test -f /opt/workbench/profile/bin/bbShellConfig
-## BEGIN workbench SHELL CONFIG ##
-/opt/workbench/profile/bin/bbShellConfig fish | source
-## END workbench SHELL CONFIG ##
+    ## BEGIN workbench SHELL CONFIG ##
+    /opt/workbench/profile/bin/bbShellConfig fish | source
+    ## END workbench SHELL CONFIG ##
 end
