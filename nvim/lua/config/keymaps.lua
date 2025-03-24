@@ -8,16 +8,13 @@ vim.keymap.set("n", "<leader>sar", "<cmd>GrugFar<cr>", { desc = "Open GrugFar" }
 vim.keymap.set("n", "<leader>ng", "<cmd>Neogen<cr>", { desc = "Neogen" })
 vim.keymap.set("n", "<leader>rn", ":IncRename", { desc = "IncRename" })
 
-local builtin = require("telescope.builtin")
-
 vim.keymap.set("n", "<leader>ff", function()
-  builtin.find_files({
-    hidden = true, -- Enable hidden files
-    no_ignore = true, -- Disable .gitignore and other ignore files
-    no_ignore_parent = true, -- Disable ignoring in parent directories
-    file_ignore_patterns = { "node_modules/", "dist/", "git/" },
-  })
+  Snacks.picker.files({ hidden = true, ignored = true })
 end, { noremap = true, silent = true, desc = "Find files (including hidden, no ignore)" })
+
+vim.keymap.set("n", "<leader>fg", function()
+  Snacks.picker.grep({ hidden = true, ignored = true })
+end, { noremap = true, silent = true, desc = "Grep (including hidden, no ignore)" })
 
 Snacks.toggle.zen():map("<leader>z")
 
