@@ -28,9 +28,11 @@ return {
       },
     }
 
-    for i = 1, 9 do
+    local harpoon_keys = { "g", "c", "r", "f" }
+
+    for i, key in ipairs(harpoon_keys) do
       table.insert(keys, {
-        "" .. i,
+        "<C-" .. key .. ">",
         function()
           require("harpoon"):list():select(i)
         end,
