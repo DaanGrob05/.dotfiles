@@ -46,3 +46,5 @@ alias prc="gh pr checkout"
 
 alias discamera="sudo modprobe -r uvcvideo"
 alias encamera="sudo modprobe uvcvideo"
+
+alias pvim="NVIM_APPNAME=nvim_personal vim"
