@@ -24,6 +24,10 @@ return {
         )
       end
 
+      dap.listeners.before.event_initialized["dapui_config"] = function() end
+      dap.listeners.before.event_terminated["dapui_config"] = function() end
+      dap.listeners.before.event_exited["dapui_config"] = function() end
+
       for _, language in ipairs(js_based_languages) do
         dap.configurations[language] = {
           {
