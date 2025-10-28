@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# This script is run by autorandr after a profile is loaded.
+# The profile name (e.g., "home", "office") is passed as the first argument ($1).
+
+PROFILE="$1"
+
+# Use i3-msg to send commands to the running i3 instance
+case "$PROFILE" in
+    home)
+        # --- HOME SETUP ---
+        # (Example: Laptop eDP-1, Main monitor DP-1, Second monitor HDMI-1)
+        # (Main monitor is DP-1)
+        i3-msg 'workspace 1 output DP-2'
+        i3-msg 'workspace 2 output HDMI-0'
+        i3-msg 'workspace 3 output HDMI-0'
+        i3-msg 'workspace 4 output HDMI-0'
+        i3-msg 'workspace 5 output HDMI-0'
+        i3-msg 'workspace 6 output HDMI-0'
+        i3-msg 'workspace 7 output HDMI-0'
+        i3-msg 'workspace 8 output HDMI-0'
+        i3-msg 'workspace 9 output HDMI-0'
+        ;;
+
+    office)
+        # --- OFFICE SETUP ---
+        # (Example: Laptop eDP-1, Main monitor HDMI-1, Second monitor HDMI-2)
+        # (Main monitor is HDMI-1)
+        i3-msg 'workspace 1 output HDMI-0'
+        i3-msg 'workspace 2 output DP-2'
+        i3-msg 'workspace 3 output DP-2'
+        i3-msg 'workspace 4 output DP-2'
+        i3-msg 'workspace 5 output DP-2'
+        i3-msg 'workspace 6 output DP-2'
+        i3-msg 'workspace 7 output DP-2'
+        i3-msg 'workspace 8 output DP-2'
+        i3-msg 'workspace 9 output DP-2'
+        ;;
+
+    laptop)
+        # --- LAPTOP ONLY SETUP ---
+        # (All workspaces must be moved back to the laptop screen)
+        i3-msg 'workspace 1 output eDP-1'
+        i3-msg 'workspace 2 output eDP-1'
+        i3-msg 'workspace 3 output eDP-1'
+        i3-msg 'workspace 4 output eDP-1'
+        i3-msg 'workspace 5 output eDP-1'
+        i3-msg 'workspace 6 output eDP-1'
+        i3-msg 'workspace 7 output eDP-1'
+        i3-msg 'workspace 8 output eDP-1'
+        i3-msg 'workspace 9 output eDP-1'
+        ;;
+esac
+
+i3-msg reload
+
+# Optional: You can also use this to reload your i3 bar (e.g., polybar)
+# pkill polybar
+# ~/.config/polybar/launch.sh &
