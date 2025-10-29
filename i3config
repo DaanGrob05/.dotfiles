@@ -186,6 +186,32 @@ mode "resize" {
 
 bindsym $mod+r mode "resize
 
+# set primary Rosé Pine Moon colorscheme colors
+set $base           #232136
+set $surface        #2a273f
+set $overlay        #393552
+set $muted          #6e6a86
+set $subtle         #908caa
+set $text           #e0def4
+set $love           #eb6f92
+set $gold           #f6c177
+set $rose           #ea9a97
+set $pine           #3e8fb0
+set $foam           #9ccfd8
+set $iris           #c4a7e7
+set $highlightlow   #2a283e
+set $highlightmed   #44415a
+set $highlighthigh  #56526e
+
+# Teming border and Windows --------------
+# target                 title     bg    text   indicator  border
+client.focused           $rose     $base $text  $rose      $rose
+client.focused_inactive  $text     $base $text  $subtle    $surface
+client.unfocused         $text     $muted $text  $overlay   $overlay
+client.urgent            $text     $base $text  $love      $love
+client.placeholder       $base     $base $text  $overlay   $overlay
+client.background        $base
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -193,6 +219,7 @@ bar {
 }
 
 gaps inner 10px
+default_border pixel 3
 
 # # Pulse Audio controls
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -232,8 +259,9 @@ workspace $ws7 output DP-2
 workspace $ws8 output HDMI-0
 workspace $ws9 output HDMI-0
 
-exec_always feh --bg-fill /home/daan/.dotfiles/Province_of_the_south_of_france_by_orbitelambda.jpg
+exec_always --no-startup-id feh --bg-fill /home/daan/.dotfiles/Province_of_the_south_of_france_by_orbitelambda.jpg
 exec --no-startup-id /usr/libexec/gsd-xsettings
 
 # Connect to home bluetooth speaker
 exec --no-startup-id bluetoothctl connect 80:4A:F2:C8:D1:18
+
