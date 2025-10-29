@@ -120,7 +120,7 @@ bindsym $mod+a focus parent
 set $ws1 "1: Browser "
 set $ws2 "2: Terminal "
 set $ws3 "3: Manual Testing "
-set $ws4 "4"
+set $ws4 "4: VS Code 󰨞"
 set $ws5 "5: Socials "
 set $ws6 "6"
 set $ws7 "7"
@@ -192,8 +192,7 @@ bar {
         status_command i3status
 }
 
-gaps inner 5px
-hide_edge_borders smart_no_gaps
+gaps inner 10px
 
 # # Pulse Audio controls
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -217,19 +216,24 @@ assign [class="Brave-browser" instance="brave-browser"] $ws1
 assign [class="Gnome-terminal"] $ws2
 assign [class="Postman"] $ws3
 assign [class="DBeaver"] $ws3
+assign [class="Code"] $ws4
 assign [class="Slack"] $ws5
 assign [class="discord"] $ws5
 assign [class="Brave-browser" instance="crx_picebhhlijnlefeleilfbanaghjlkkna"] $ws9
 
+# Home Setup
 workspace $ws1 output DP-2
 workspace $ws2 output HDMI-0
 workspace $ws3 output HDMI-0
-workspace $ws4 output HDMI-0
+workspace $ws4 output DP-2
 workspace $ws5 output HDMI-0
 workspace $ws6 output HDMI-0
-workspace $ws7 output HDMI-0
+workspace $ws7 output DP-2
 workspace $ws8 output HDMI-0
 workspace $ws9 output HDMI-0
 
 exec_always feh --bg-fill /home/daan/.dotfiles/Province_of_the_south_of_france_by_orbitelambda.jpg
 exec --no-startup-id /usr/libexec/gsd-xsettings
+
+# Connect to home bluetooth speaker
+exec --no-startup-id bluetoothctl connect 80:4A:F2:C8:D1:18
