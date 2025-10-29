@@ -18,6 +18,12 @@ ln -s ~/.dotfiles/config.fish ~/.config/fish/config.fish
 
 ln -s ~/.dotfiles/ideavimrc ~/.ideavimrc
 
+rm ~/.config/i3/config
+ln -s ~/.dotfiles/i3config ~/.config/i3/config
+
+rm ~/.config/i3status/config
+ln -s ~/.dotfiles/i3status_config ~/.config/i3status/config
+
 ```
 
 # Other Actions
