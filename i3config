@@ -215,7 +215,31 @@ client.background        $base
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+    # Set the i3status command to use your new config file
+    status_command i3status -c ~/.config/i3status/config
+
+    # IMPORTANT: You must use a Nerd Font to see the icons
+    # Replace 'JetBrainsMono' with your preferred Nerd Font
+    font pango:JetBrainsMono Nerd Font 11
+
+    # Rosé Pine Moon color theme for the bar and workspaces
+    colors {
+        # Rosé Pine Moon Palette
+        #                        Border  BG      Text
+        focused_workspace        $love   $love   $base
+        active_workspace         $pine   $pine   $highlightlow
+        inactive_workspace       $base   $base   $muted
+        urgent_workspace         $gold   $gold   $base
+
+        # Bar background color
+        background               $base
+
+        # Default text color for i3status output
+        statusline               $rose
+
+        # Separator line color between modules
+        separator                $muted
+    }
 }
 
 gaps inner 10px

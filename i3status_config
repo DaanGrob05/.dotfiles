@@ -1,0 +1,67 @@
+# Rosé Pine Moon theme for i3status
+
+general {
+    colors = true
+    interval = 5
+
+    # Rosé Pine Moon Palette
+    color_good = "#9ccfd8"     # Foam
+    color_bad = "#eb6f92"      # Love
+    color_degraded = "#f6c177"  # Gold
+}
+
+# The order of modules on the bar
+order += "disk /"
+order += "memory"
+order += "load"
+# order += "wireless _first_" # Uncomment if you use Wi-Fi
+# order += "ethernet _first_" # Uncomment if you use Ethernet
+order += "battery all"
+order += "tztime local"
+
+# --- Module Definitions ---
+
+disk "/" {
+    # 󰋊 is a Nerd Font icon for a hard drive
+    format = "󰋊 %avail"
+}
+
+memory {
+    # Memory is a Nerd Font icon for RAM
+    format = "Memory %used | %available"
+    threshold_degraded = "1G"
+    format_degraded = "LOW MEMORY"
+}
+
+load {
+    # CPU is a Nerd Font icon for a CPU
+    format = "CPU %1min"
+}
+
+# Example: Wi-Fi module
+# wireless _first_ {
+#     format_up = "W: (%quality at %essid) %ip"
+#     format_down = "W: down"
+# }
+
+# Example: Ethernet module
+# ethernet _first_ {
+#     format_up = "E: %ip (%speed)"
+#     format_down = "E: down"
+# }
+
+battery all {
+    # 󰁹 (bat), 󰂄 (charging), 󰁹 (full)
+    format = "%status %percentage %remaining"
+    format_down = "No Battery"
+    status_chr = "󰂄 CHR"
+    status_bat = "󰁹 BAT"
+    status_full = "󰁹 FULL"
+    low_threshold = 20
+    # The 'color_bad' from 'general' will be used below this threshold
+}
+
+tztime local {
+    # 󰃭 (calendar), Time (clock)
+    format = "󰃭 %Y-%m-%d Time %H:%M"
+}
