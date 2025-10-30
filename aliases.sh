@@ -9,6 +9,7 @@ alias ca="cargo"
 alias src="source ~/.dotfiles/config.fish"
 
 alias vim="nvim"
+alias v="nvim"
 
 alias gg="lazygit"
 alias lad="lazydocker"
