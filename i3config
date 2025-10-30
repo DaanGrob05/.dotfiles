@@ -266,3 +266,5 @@ exec --no-startup-id bluetoothctl connect 80:4A:F2:C8:D1:18
 
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
+
+exec --no-startup-id ~/.dotfiles/scripts/login.sh
