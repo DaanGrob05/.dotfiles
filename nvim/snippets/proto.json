@@ -1,0 +1,1 @@
+{"timestamps":{"body":["  google.protobuf.Timestamp created_at = ${1:created};","  google.protobuf.Timestamp updated_at = ${2:updated};"],"prefix":"timestamps"},"imTime":{"body":"import \"google/protobuf/timestamp.proto\";","prefix":"imTime"}}
