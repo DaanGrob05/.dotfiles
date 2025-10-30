@@ -1,2 +1,3 @@
 source ~/.dotfiles/fish_functions/laravel.fish
 source ~/.dotfiles/fish_functions/take.fish
+source ~/.dotfiles/fish_functions/btinfo.fish
