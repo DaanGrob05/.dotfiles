@@ -35,3 +35,5 @@ alias mux="tmuxinator"
 alias gocli="golangci-lint"
 
 alias prc="gh pr checkout"
+
+alias bt="bluetoothctl"
