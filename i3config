@@ -100,7 +100,7 @@ set $ws2 "2: Terminal "
 set $ws3 "3: Manual Testing "
 set $ws4 "4: VS Code 󰨞"
 set $ws5 "5: Socials "
-set $ws6 "6"
+set $ws6 "6: 3D Printing"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9: Monkeytype 󰼭"
@@ -245,6 +245,7 @@ assign [class="DBeaver"] $ws3
 assign [class="Code"] $ws4
 assign [class="Slack"] $ws5
 assign [class="discord"] $ws5
+assign [class="BambuStudio"] $ws6
 assign [class="Brave-browser" instance="crx_picebhhlijnlefeleilfbanaghjlkkna"] $ws9
 
 # Home Setup
