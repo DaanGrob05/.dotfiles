@@ -248,16 +248,29 @@ assign [class="discord"] $ws5
 assign [class="BambuStudio"] $ws6
 assign [class="Brave-browser" instance="crx_picebhhlijnlefeleilfbanaghjlkkna"] $ws9
 
-# Home Setup
-workspace $ws1 output DP-2
-workspace $ws2 output HDMI-0
-workspace $ws3 output HDMI-0
-workspace $ws4 output DP-2
-workspace $ws5 output HDMI-0
-workspace $ws6 output HDMI-0
-workspace $ws7 output DP-2
-workspace $ws8 output HDMI-0
-workspace $ws9 output HDMI-0
+# # Home Setup
+# workspace $ws1 output DP-2
+# workspace $ws2 output HDMI-0
+# workspace $ws3 output HDMI-0
+# workspace $ws4 output DP-2
+# workspace $ws5 output HDMI-0
+# workspace $ws6 output HDMI-0
+# workspace $ws7 output DP-2
+# workspace $ws8 output HDMI-0
+# workspace $ws9 output HDMI-0
+exec --no-startup-id gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
+
+# Office Setup
+workspace $ws1 output HDMI-0
+workspace $ws4 output HDMI-0
+workspace $ws7 output HDMI-0
+workspace $ws2 output DP-2
+workspace $ws3 output DP-2
+workspace $ws5 output DP-2
+workspace $ws6 output DP-2
+workspace $ws8 output DP-2
+workspace $ws9 output DP-2
+exec --no-startup-id gsettings set org.gnome.desktop.interface text-scaling-factor 1.1
 
 exec_always --no-startup-id feh --bg-fill /home/daan/.dotfiles/Province_of_the_south_of_france_by_orbitelambda.jpg
 exec --no-startup-id /usr/libexec/gsd-xsettings
