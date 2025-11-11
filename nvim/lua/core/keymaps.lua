@@ -45,3 +45,5 @@ vim.keymap.set("n", "<leader>pr", ":!prc ", { desc = "Pull Request Checkout" })
 -- Suda
 vim.keymap.set("n", "<leader>ws", ":SudaWrite", { desc = "Suda Write" })
 vim.keymap.set("n", "<leader>rs", ":SudaRead", { desc = "Suda Read" })
+
+vim.keymap.set("x", "v", "V")
