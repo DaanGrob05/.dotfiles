@@ -1,22 +1,5 @@
 -- lazy.nvim
 return {
-	{
-		"m4xshen/hardtime.nvim",
-		dependencies = { "MunifTanjim/nui.nvim" },
-		opts = {
-			restricted_keys = {},
-			disabled_keys = {
-				["<Up>"] = false,
-				["<Down>"] = false,
-				["<Left>"] = false,
-				["<Right>"] = false,
-			},
-			max_count = 10,
-			-- restriction_mode = "hint",
-			disable_mouse = false,
-		},
-		event = "BufEnter",
-	},
 
 	{
 		"tris203/precognition.nvim",
