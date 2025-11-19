@@ -37,3 +37,5 @@ alias gocli="golangci-lint"
 alias prc="gh pr checkout"
 
 alias bt="bluetoothctl"
+
+alias dl="docker logs"
