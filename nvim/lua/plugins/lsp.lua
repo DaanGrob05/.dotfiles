@@ -53,7 +53,8 @@ return {
 			end,
 		})
 
-		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		-- local capabilities = vim.lsp.protocol.make_client_capabilities()
+		local capabilities = require("blink.cmp").get_lsp_capabilities()
 
 		local servers = {
 			lua_ls = {
@@ -99,6 +100,18 @@ return {
 							propertyDeclarationTypes = { enabled = true },
 							variableTypes = { enabled = false },
 						},
+					},
+				},
+			},
+			gopls = {
+				settings = {
+					gopls = {
+						experimentalPostfixCompletions = true,
+						usePlaceholders = true,
+						analyses = {
+							unusedparams = true,
+						},
+						staticcheck = true,
 					},
 				},
 			},

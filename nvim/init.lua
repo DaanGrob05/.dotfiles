@@ -53,6 +53,7 @@ require("lazy").setup({
 	require("plugins.nvim-surround"),
 	require("plugins.neoscroll"),
 	require("plugins.suda"),
+	require("plugins.go"),
 }, {
 	checker = { enabled = true },
 	performance = {
