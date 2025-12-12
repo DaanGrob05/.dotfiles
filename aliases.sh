@@ -39,3 +39,6 @@ alias prc="gh pr checkout"
 alias bt="bluetoothctl"
 
 alias dl="docker logs"
+
+alias py="python3"
+alias va="source venv/bin/activate.fish"

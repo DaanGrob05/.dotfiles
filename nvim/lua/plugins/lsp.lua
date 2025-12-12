@@ -122,7 +122,7 @@ return {
 		local ensure_installed = {
 			"delve",
 			"intelephense",
-			"debugpy",
+			-- "debugpy",
 			"tailwindcss-language-server",
 			"pyright",
 			"stylua",
@@ -143,6 +143,8 @@ return {
 			"shfmt",
 			"vtsls",
 			"buf_ls",
+			"buf",
+			"clangd",
 		}
 
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
