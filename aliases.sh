@@ -42,3 +42,5 @@ alias dl="docker logs"
 
 alias py="python3"
 alias va="source venv/bin/activate.fish"
+alias vc="python3 -m venv venv"
+alias venv="vc && vc"
