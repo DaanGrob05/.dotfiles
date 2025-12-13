@@ -50,6 +50,21 @@ return {
 						callback = vim.lsp.buf.clear_references,
 					})
 				end
+
+				if client and client.server_capabilities.documentFormattingProvider then
+					local filetype = vim.bo[event.buf].filetype
+					-- Apply to proto, c/cpp files which are handled by clangd (for c/cpp)
+					-- and buf_ls (for proto) which often use clang-format internally.
+					if filetype == "proto" or filetype == "c" or filetype == "cpp" then
+						vim.api.nvim_create_autocmd("BufWritePre", {
+							buffer = event.buf,
+							callback = function()
+								vim.lsp.buf.format({ async = true })
+							end,
+							desc = "Auto format on save",
+						})
+					end
+				end
 			end,
 		})
 
