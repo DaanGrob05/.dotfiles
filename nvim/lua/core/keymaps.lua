@@ -48,4 +48,4 @@ vim.keymap.set("n", "<leader>rs", ":SudaRead", { desc = "Suda Read" })
 
 vim.keymap.set("x", "v", "V")
 
-vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>O")
+vim.keymap.set("n", "<leader>ie", "oif err != nil {<CR>}<Esc>O")
