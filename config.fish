@@ -29,3 +29,7 @@ if test -f ~/.dotfiles/.private-dotfiles/config.fish
     source ~/.dotfiles/.private-dotfiles/config.fish
 end
 
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
