@@ -54,6 +54,7 @@ require("lazy").setup({
 	require("plugins.neoscroll"),
 	require("plugins.suda"),
 	require("plugins.go"),
+	require("plugins.undotree"),
 }, {
 	checker = { enabled = true },
 	performance = {
