@@ -55,6 +55,7 @@ require("lazy").setup({
 	require("plugins.suda"),
 	require("plugins.go"),
 	require("plugins.undotree"),
+	require("plugins.markdown-preview"),
 }, {
 	checker = { enabled = true },
 	performance = {
